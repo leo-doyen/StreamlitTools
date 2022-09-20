@@ -13,10 +13,10 @@ def basicCheck(df, col) :
                 .reset_index(name='count')
 
                 st.dataframe(colCount) 
-                # st.bar_chart(colCount, x=col_to_delete, y='count')
-                # if st.button('Delete this column'):
-                #     del df[col_to_delete]
-                #     st.success(col_to_delete +' est détruit')
+                st.bar_chart(colCount, x=col_to_delete, y='count')
+                if st.button('Delete this column'):
+                    del df[col_to_delete]
+                    st.success(col_to_delete +' est détruit')
 
             # colCount = df.groupby(colName)[colName]\
             # .count()\
