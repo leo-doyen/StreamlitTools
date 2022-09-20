@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
+from definitions.separator import get_separator
 
 st.markdown("# CSV Formatter")
 
-option = st.selectbox(
-'Choose separator',
-('/', ',', '#',';',':','\t'))
+option = st.selectbox('Choose separator', get_separator())
 st.write('Separator selected:', option)
 
 uploaded_file = st.file_uploader("Choose a CSV file")
